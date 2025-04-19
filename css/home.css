@@ -2,7 +2,8 @@
 :root {
     --main-color : #0d6efd;
     --main-color-alt : #1787e0;
-    --section-bacground:#ececec94;
+    --main-liner : linear-gradient(90deg, rgba(237, 240, 242, 1) 0%, rgba(115, 125, 148, 1) 50%, rgba(9, 3, 89, 1) 100%);
+    --section-bacground:#ececec;
     --main-transition : 0.3s;
     --main-padding-top : 100px;
     --main-padding-bottom : 100px;
@@ -301,13 +302,148 @@ color: var(--main-color);
     animation: moving-arrow .6s linear infinite ;
 }
 /*End clinics*/ 
+
+/*Start Information*/
+.information {
+    margin-top: 50px;
+    background-image: url(../assets/info.jpg);
+    padding: 150px 0;
+    background-size: cover;
+    position: relative;
+    
+}
+.information::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(237, 240, 242, 1) 0%, rgba(115, 125, 148, 1) 50%, rgba(9, 3, 89, 1) 100%);
+    opacity: 0.5;
+}
+.information .container{
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+gap:30px ;
+}
+.information .container .info {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+}
+.information .container .info .icon{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+.information .container .info .icon:hover{
+    background-color: var(--main-color);
+}
+.information .container .info .icon i {
+    font-size: 24px;
+}
+.information .container .info h2{
+    font-size: 32px;
+}
+/*End Information*/
+
+/*Start choose*/
+.choose{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+.choose h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.choose .para-info{
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.choose .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 50px;
+}
+.choose .container  .box {
+    margin-bottom: 30px;
+    p{
+        margin-top: 20px;
+    }
+}
+@media(max-width : 992px){
+    .choose .container  .box , .choose .container  .box .title  {
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+.choose .container  .box .title{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .icon{
+        background-color: var(--main-color);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size: 24px;
+            color: white;
+        }
+    }
+    h3{
+        font-size: 24px;
+    }
+}
+
+/*End choose*/
+
 /*Start equipment*/
 .medical-equipment{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
     background-color: var(--section-bacground);
-    clip-path: polygon(
+    background-image: url(../assets/medical.jpg);
+    background-size: cover;
+    background: linear-gradient();
+    
+    .main-title {
+        border-color: white;
+        color: white;
+    }     
+}
+.medical-equipment::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(237, 240, 242, 1) 0%, rgba(115, 125, 148, 1) 50%, rgba(9, 3, 89, 1) 100%);
+    opacity: 0.5;
+}
+@media(min-width : 767px){
+    .medical-equipment , .testimonials , .infinty-carusal {
+        clip-path: polygon(
     0 0,
     2% 3%, 4% 0, 6% 3%, 8% 0, 10% 3%,
     12% 0, 14% 3%, 16% 0, 18% 3%, 20% 0,
@@ -320,14 +456,15 @@ color: var(--main-color);
     82% 3%, 84% 0, 86% 3%, 88% 0, 90% 3%,
     92% 0, 94% 3%, 96% 0, 98% 3%, 100% 0,
     100% 100%, 0 100%
-    );
-
-      
+    ); 
+    }
 }
 .medical-equipment .container{
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
     gap:30px ;
+    position: relative;
+    z-index: 3;
 }
 .medical-equipment .box{
 padding: 15px 15px 7.5px;
@@ -439,20 +576,19 @@ max-width:100% ;
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     background-color: var(--section-bacground);
-    clip-path: polygon(
-    0 0,
-    2% 3%, 4% 0, 6% 3%, 8% 0, 10% 3%,
-    12% 0, 14% 3%, 16% 0, 18% 3%, 20% 0,
-    22% 3%, 24% 0, 26% 3%, 28% 0, 30% 3%,
-    32% 0, 34% 3%, 36% 0, 38% 3%, 40% 0,
-    42% 3%, 44% 0, 46% 3%, 48% 0, 50% 3%,
-    52% 0, 54% 3%, 56% 0, 58% 3%, 60% 0,
-    62% 3%, 64% 0, 66% 3%, 68% 0, 70% 3%,
-    72% 0, 74% 3%, 76% 0, 78% 3%, 80% 0,
-    82% 3%, 84% 0, 86% 3%, 88% 0, 90% 3%,
-    92% 0, 94% 3%, 96% 0, 98% 3%, 100% 0,
-    100% 100%, 0 100%
-    );
+    background-image: url(../assets/infinit.jpg);
+    background-size: cover;
+    position: relative;
+}
+.infinty-carusal::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(237, 240, 242, 1) 0%, rgba(115, 125, 148, 1) 50%, rgba(9, 3, 89, 1) 100%);
+    opacity: 0.5;
 }
 .photo-wrapper {
     display: flex;
@@ -576,6 +712,163 @@ color: #777;
 }
 /*End Feature*/
 
+
+/*Start Testimoniols*/
+.testimonials{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-bacground);
+    overflow: hidden;
+    position: relative;
+    background-image: url(../assets/testimalions.jpg);
+    background-size: cover;
+    .main-title {
+        border-color: white;
+        color: white;
+    } 
+}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(237, 240, 242, 1) 0%, rgba(115, 125, 148, 1) 50%, rgba(9, 3, 89, 1) 100%);
+    opacity: 0.6;
+}
+.testimonials .container {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 60px;
+}
+.testimonials .box {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(0 0 0 /7%);
+    border-radius: 6px;
+    position: relative;
+}
+.testimonials .box h3 {
+margin: 0 0 10px;
+color: var(--main-color);
+}
+.testimonials .box .title {
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+
+}
+.testimonials .box .rate .filled {
+    color: #ffc107;
+}
+.testimonials .box p {
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.testimonials .box img {
+    max-width: 100%;
+    width: 100px;
+    
+    position: absolute;
+    right: -20px;
+    top: -50px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: 10px solid var(--section-bacground);
+    
+}
+
+/*End Testimoniols*/
+.team { 
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom); 
+}
+.team .container { 
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+gap: 40px;
+}
+.team .box { 
+position: relative;
+}
+.team .box::before , 
+.team .box::after{
+    content: "";
+    position: absolute;
+    background-color: #f3f3f3;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+.team .box::before{
+    z-index: -2;
+    width: calc(100% - 60px);
+}
+.team .box::after{
+    z-index: -1;
+    background-color: #e4e4e4;
+    width: 0;
+}
+.team .box:hover::after{
+    width: calc(100% - 60px);
+}
+.team .box img{
+    width: calc(100% - 60px);
+    max-width: 100%;
+    transition: var(--main-transition);
+    border-radius: 10px;
+}
+.team .box:hover img{
+    filter: grayscale(100%);
+}
+.team .box .data {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+.team .box .data .icons {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+   
+}
+
+.team .box .data .icons i {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    color: #777;
+    transition: var(--main-transition);
+}
+.team .box .data .icons i:hover {
+    color: var(--main-color);
+}
+.team .box .info {
+padding-left: 80px;
+}
+.team .box .info h3 {
+color: var(--main-color);
+font-size: 22px;
+transition: var(--main-transition);
+margin-top: 10px;
+
+}
+.team .box:hover .info h3 {
+color: #777;
+}
+.team .box .info p{
+margin-top: 10px;
+margin-bottom: 25px;
+}
+/*End Team */
 /*Start Animation*/
 @keyframes  up-and-down {
     0% , 100% {
@@ -635,117 +928,3 @@ color: #777;
     }
 }
 /*End Animation*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.playbtn {
-    position: relative;
-    display: inline-block;
-    padding: 25px 30px;
-    margin: 40px 0;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    font-weight: 600;
-    letter-spacing: 4px;
-    overflow: hidden;
-  }
- 
-  .playbtn span {
-    position: absolute;
-    display: block;
-  }
-  
-  .playbtn span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(90deg, transparent, #000);
-    animation: animate1 1s linear infinite;
-  }
-  
-  @keyframes animate1 {
-    0% {
-      left: -100%;
-    }
-    50%,
-    100% {
-      left: 100%;
-    }
-  }
-  .playbtn span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 10px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #000);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-  }
-  
-  
-  @keyframes animate2 {
-    0% {
-      top: -100%;
-    }
-    50%,
-    100% {
-      top: 100%;
-    }
-  }
-  
-  .playbtn span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(270deg, transparent, #000);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.5s;
-  }
-  
-  @keyframes animate3 {
-    0% {
-      right: -100%;
-    }
-    50%,
-    100% {
-      right: 100%;
-    }
-  }
-  
-  .playbtn span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 10px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #000);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-  }
-  
-  @keyframes animate4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,
-    100% {
-      bottom: 100%;
-    }
-  }*/

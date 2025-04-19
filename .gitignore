@@ -1,22 +1,6 @@
-# Ignore images and videos
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.mp4
-*.mov
+assets/
+webfonts/
 
-# Ignore font files
-*.woff
-*.woff2
-*.ttf
-*.eot
-
-# Ignore archives and design files
-*.zip
-*.rar
-*.psd
-*.ai
 
 
 
