@@ -1,0 +1,164 @@
+[
+    {
+      "id": 1,
+      "name": "Internal Medicine Clinic - عيادة الباطنة",
+      "place": "Floor 4",
+      "pohto": "../assets/Internal Medicine Clinic.jpg",
+      "description": "Expert care helps adult body stay safe and strong."
+    },
+    {
+      "id": 2,
+      "name": "Dentistry Clinic - عيادة الأسنان",
+      "place": "Floor 1",
+      "pohto": "../assets/Dentistry Clinic.jpg",
+      "description": "We care for healthy teeth and confident, bright smiles."
+    },
+    {
+      "id": 3,
+      "name": "Pediatrics Clinic - عيادة الأطفال",
+      "place": "Floor 1",
+      "pohto": "../assets/Pediatrics Clinic.jpg",
+      "description": "Gentle care for your children at every growing stage."
+    },
+    {
+      "id": 4,
+      "name": "Dermatology Clinic - عيادة الجلدية",
+      "place": "Floor 2",
+      "pohto": "../assets/Dermatology Clinic.jpg",
+      "description": "Skincare solutions for all ages and every skin type."
+    },
+    {
+      "id": 5,
+      "name": "Ophthalmology Clinic - عيادة العيون",
+      "place": "Floor 1",
+      "pohto": "../assets/Ophthalmology Clinic.jpg",
+      "description": "Clear vision starts with professional eye care today."
+    },
+    {
+      "id": 6,
+      "name": "Orthopedic Clinic - عيادة العظام",
+      "place": "Floor 3",
+      "pohto": "../assets/Orthopedic Clinic.jpg",
+      "description": "Bone and joint care to keep you moving freely."
+    },
+    {
+      "id": 7,
+      "name": "Cardiology Clinic - عيادة القلب",
+      "place": "Floor 2",
+      "pohto": "../assets/Cardiology Clinic.jpg",
+      "description": "Heart health support with care and trusted expertise."
+    },
+    {
+      "id": 8,
+      "name": "Neurology Clinic - عيادة المخ والأعصاب",
+      "place": "Floor 2",
+      "pohto": "../assets/Neurology Clinic.jpg",
+      "description": "Treating brain and nerve issues with modern care."
+    },
+    {
+      "id": 9,
+      "name": "Psychiatry Clinic - عيادة الطب النفسي",
+      "place": "Floor 1",
+      "pohto": "../assets/Psychiatry Clinic.jpg",
+      "description": "Mental wellness support for a healthier, happier life."
+    },
+    {
+      "id": 10,
+      "name": "ENT Clinic - عيادة الأنف والأذن والحنجرة",
+      "place": "Floor 4",
+      "pohto": "../assets/ENT Clinic.jpg",
+      "description": "Ear, nose, and throat care for all your needs."
+    },
+    {
+      "id": 11,
+      "name": "Urology Clinic - عيادة المسالك البولية",
+      "place": "Floor 4",
+      "pohto": "../assets/Urology Clinic.jpg",
+      "description": "Specialized care for urinary and reproductive health."
+    },
+    {
+      "id": 12,
+      "name": "Gynecology Clinic - عيادة النساء والتوليد",
+      "place": "Floor 3",
+      "pohto": "../assets/Gynecology and Obstetrics Clinic.jpg",
+      "description": "Women's health services with expert, gentle support."
+    },
+    {
+      "id": 13,
+      "name": "Endocrinology Clinic - عيادة الغدد الصماء",
+      "place": "Floor 2",
+      "pohto": "../assets/Endocrinology Clinic.jpg",
+      "description": "Hormone balance and diabetes care made simple."
+    },
+    {
+      "id": 14,
+      "name": "Gastroenterology Clinic - عيادة الجهاز الهضمي",
+      "place": "Floor 4",
+      "pohto": "../assets/Gastroenterology Clinic.jpg",
+      "description": "Digestive system health with advanced diagnosis tools."
+    },
+    {
+      "id": 15,
+      "name": "Pulmonology Clinic - عيادة الصدرية (الرئة)",
+      "place": "Floor 2",
+      "pohto": "../assets/Pulmonology Clinic.jpg",
+      "description": "Breathing support with expert pulmonary treatments."
+    },
+    {
+      "id": 16,
+      "name": "Nephrology Clinic - عيادة أمراض الكلى",
+      "place": "Floor 3",
+      "pohto": "../assets/Nephrology Clinic.jpg",
+      "description": "Kidney care with a focus on long-term health."
+    },
+    {
+      "id": 17,
+      "name": "Rheumatology Clinic - عيادة أمراض الروماتيزم",
+      "place": "Floor 2",
+      "pohto": "../assets/Rheumatology Clinic.jpg",
+      "description": "Joint and autoimmune care to ease your pain."
+    },
+    {
+      "id": 18,
+      "name": "Oncology Clinic - عيادة الأورام",
+      "place": "Floor 1",
+      "pohto": "../assets/Oncology Clinic.jpg",
+      "description": "Compassionate cancer care with advanced therapies."
+    },
+    {
+      "id": 19,
+      "name": "Hematology Clinic - عيادة أمراض الدم",
+      "place": "Floor 1",
+      "pohto": "../assets/Hematology Clinic.jpg",
+      "description": "Blood disorder care with accurate, caring support."
+    },
+    {
+      "id": 20,
+      "name": "Allergy Clinic - عيادة الحساسية والمناعة",
+      "place": "Floor 3",
+      "pohto": "../assets/Allergy and Immunology Clinic.jpg",
+      "description": "Relief for allergies and immune system issues."
+    },
+    {
+      "id": 21,
+      "name": "Plastic Surgery Clinic - عيادة التجميل",
+      "place": "Floor 1",
+      "pohto": "../assets/Plastic Surgery Clinic.jpg",
+      "description": "Enhancing beauty with safety and skilled hands."
+    },
+    {
+      "id": 22,
+      "name": "General Surgery Clinic - عيادة الجراحة العامة",
+      "place": "Floor 3",
+      "pohto": "../assets/General Surgery Clinic.jpg",
+      "description": "Surgical solutions from a trusted, skilled team."
+    },
+    {
+      "id": 23,
+      "name": "Physical Therapy Clinic - عيادة العلاج الطبيعي والتأهيل",
+      "place": "Floor 4",
+      "pohto": "../assets/Physical Therapy and Rehabilitation Clinic.jpg",
+      "description": "Recovery and movement through personalized therapy."
+    }
+  ]
+  

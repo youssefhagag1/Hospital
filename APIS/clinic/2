@@ -1,0 +1,17 @@
+{
+    "id": 2,
+    "name": "Dentistry Clinic - عيادة الأسنان",
+    "place": "Floor 1",
+    "description": "This is your best stop for pure care. Help heal pain, keep calm, feel good, save more, love life.",
+    "photo":["../assets/Dentistry Clinic.jpg" , "../assets/Dentistry Clinic.jpg" , "../assets/Dentistry Clinic.jpg"],
+    "doctors": [
+      {
+        "id": 13,
+        "name": "Yara Moaz",
+        "profile": "assets/doctor-4.jpg",
+        "specialty": "Dentistry",
+        "experiance": "messagetare",
+        "price": "150 EGP"
+      }
+    ]
+  }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pricing</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/pricing.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <a href="https://wa.me/201151719578" class="whatsapp-float" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+    </a>      
+    <div class="top" id="top">
+        <button class="top-btn"><i class="fa-solid fa-angle-up"></i></button>
+    </div>
+    <div class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">Elsalam Hospital</a>
+            <ul class="main-nav" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clinics.html">Clinics</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="form">
+        <div class="container">
+            <div class="dummy">
+                <h3>Hospital Plan Registration</h3>
+                <p>Please fill out the form below to register for plan.</p>
+            </div>
+            <div class="text">
+                <h2 id ="title"></h2>
+                <p>Affordable hospital plans for everyone, anytime, anywhere.</p>
+            </div>
+            <form action="" id="plan_form">
+                <input type="text" name="name" id="name" class="input" required placeholder="Your Name">
+                <input type="text" name="phone" id="phone" class="input" required minlength="11" maxlength="11" placeholder="Your Phone">
+                <input type="text" name="age" id="age" class="input" required placeholder="Your Age">
+                <select name="gender" id="gender" class="input" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <input type="text" name="national_id" id="national_id" class="input" required minlength="14" maxlength="14" placeholder="National ID">
+                <button class="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/pricing.js"></script>
+</body>
+</html>

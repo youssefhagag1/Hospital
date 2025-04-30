@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinics</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/clinics.css">
+</head>
+<body>
+  <a href="https://wa.me/201151719578" class="whatsapp-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+</a>
+    <div class="top" id="top">
+        <button class="top-btn"><i class="fa-solid fa-angle-up"></i></button>
+    </div>
+    <div class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">Elsalam Hospital</a>
+            <ul class="main-nav" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clinics.html" class="active">Clinics</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>    
+            </ul>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="clinics-heading">
+        <div class="container">
+            <div class="content">
+                <p>Your health is our top priority</p>
+                <p>Good health is a state of mental, physical and social well being and it does not just mean the absence of disease!</p>
+                <div class="info">
+                    <a href="contact.html">
+                        <span>Get in Touch</span>
+                        <button><i class="fa-solid fa-angle-right"></i></button>
+                    </a>
+                    <a href="about.html">
+                        <span>See More</span>
+                        <button><i class="fa-solid fa-angle-right"></i></button>
+                    </a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="assets/doctro-clinic.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="clinics" id="clinics">
+        <div class="search">
+            <input type="text" class="search-input" id="search" placeholder="search for Clinics">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <div class="container"><!--From js--></div>
+        <div class="more" id="more">Show More <i class="fa-solid fa-angle-down"></i></div>
+        
+    </div>
+    <div class="clinics-slider">
+        <div class="container">
+            <div class="slider-text">
+                <h3>Specialized Clinics</h3>
+                <p>Our hospital offers a wide range of specialized clinics to meet your health needs.
+                    From pediatrics to surgery, each clinic is staffed with experienced medical professionals
+                    dedicated to providing the highest level of care.
+                </p>
+                <div class="info">
+                    <span>Expert Care</span>
+                    <span>Friendly Nurses</span>
+                    <span>Clean Facilities</span>
+                    <span>Health First</span>
+                    
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider-container">
+                    <img src="assets/ENT Clinic.jpg" alt="ENT Clinic"class="active">
+                    <img src="assets/Pediatrics Clinic.jpg" alt="Pediatrics Clinic">
+                    <img src="assets/General Surgery Clinic.jpg" alt="General Surgery Clinic">
+                    <img src="assets/Gastroenterology Clinic.jpg" alt="Gastroenterology Clinic">
+                    <img src="assets/Nephrology Clinic.jpg" alt="Nephrology Clinic">
+                    <img src="assets/Endocrinology Clinic.jpg" alt="Endocrinology Clinic">
+                </div>
+                <div class="slider-controls">
+                    <span id="prev" class="prev"><i class="fa-solid fa-angle-left"></i></span>
+                    <span id="indicators" class="indicators"></span>
+                    <span id="next" class="next"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clinics-base">
+      <section class="base-template">
+        <div class="base-template__wrapper wrapper">
+          <div class="base-template__content">
+            <div class="booking-slider">
+              <!-- Slider Navigation -->
+              <div class="booking-slider__nav slider-nav">
+                <div title="Newest offers" tabindex="0" class="slider-nav__item slider-nav__item_prev">
+                  <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 26L2 14L14 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div title="Oldest offers" tabindex="0" class="slider-nav__item slider-nav__item_next">
+                  <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 26L14 14L2 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              
+              <!-- Slider Content -->
+              <div class="booking-slider__slider swiper">
+                <div class="booking-slider__wrapper swiper-wrapper">
+                  <!-- Slide 1: Urology Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <div title="The most popular option" class="booking-slider-item__badge">Popular</div>
+                      <a title="Urology Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Urology Clinic.jpg" alt="Urology Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$350<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Urology Clinic" href="/" onclick="event.preventDefault();">Urology Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Specialized in urinary tract and male reproductive system disorders with advanced diagnostic tools.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">4 Procedure Rooms</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">3 Specialists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 2: Dentistry Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <a title="Dentistry Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Dentistry Clinic.jpg" alt="Dentistry Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$120<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Dentistry Clinic" href="/" onclick="event.preventDefault();">Dentistry Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Comprehensive dental care including cosmetic dentistry, implants, and pediatric dental services.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">6 Dental Chairs</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">4 Dentists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 3: Ophthalmology Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <a title="Ophthalmology Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Ophthalmology Clinic.jpg" alt="Ophthalmology Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$280<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Ophthalmology Clinic" href="/" onclick="event.preventDefault();">Ophthalmology Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          State-of-the-art eye care center specializing in cataract surgery and laser vision correction.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">3 Exam Rooms</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">2 Ophthalmologists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 4: Pulmonology Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <div title="The most popular option" class="booking-slider-item__badge">Popular</div>
+                      <a title="Pulmonology Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Pulmonology Clinic.jpg" alt="Pulmonology Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$320<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Pulmonology Clinic" href="/" onclick="event.preventDefault();">Pulmonology Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Specializing in the diagnosis and treatment of lung conditions and respiratory disorders.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">5 Exam Rooms</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">3 Pulmonologists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 5: Plastic Surgery Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <a title="Plastic Surgery Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Plastic Surgery Clinic.jpg" alt="Plastic Surgery Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$450<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Plastic Surgery Clinic" href="/" onclick="event.preventDefault();">Plastic Surgery Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Offering cosmetic and reconstructive procedures performed by board-certified plastic surgeons.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">2 ORs</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">2 Surgeons</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 6: Allergy and Immunology Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <a title="Allergy and Immunology Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Allergy and Immunology Clinic.jpg" alt="Allergy and Immunology Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$290<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Allergy and Immunology Clinic" href="/" onclick="event.preventDefault();">Allergy and Immunology Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Specializing in the diagnosis and treatment of allergies, asthma, and immune system disorders.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">4 Testing Rooms</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">3 Specialists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 7: Endocrinology Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <div title="The most popular option" class="booking-slider-item__badge">Popular</div>
+                      <a title="Endocrinology Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Endocrinology Clinic.jpg" alt="Endocrinology Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$310<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Endocrinology Clinic" href="/" onclick="event.preventDefault();">Endocrinology Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Specializing in diabetes, thyroid disorders, and other hormonal imbalances.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">3 Exam Rooms</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">2 Endocrinologists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 8: ENT Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <a title="ENT Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/ENT Clinic.jpg" alt="ENT Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$270<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="ENT Clinic" href="/" onclick="event.preventDefault();">ENT Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Comprehensive care for ear, nose, and throat conditions with advanced diagnostic equipment.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">5 Exam Rooms</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">3 ENT Specialists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- Slide 9: Nephrology Clinic -->
+                  <div class="booking-slider__slide swiper-slide">
+                    <div class="booking-slider__item booking-slider-item">
+                      <a title="Nephrology Clinic" href="/" class="booking-slider-item__image" onclick="event.preventDefault();">
+                        <img src="assets/Nephrology Clinic.jpg" alt="Nephrology Clinic" />
+                      </a>
+                      <div class="booking-slider-item__content">
+                        <div class="booking-slider-item__price">$330<small>/consultation</small></div>
+                        <h2 class="booking-slider-item__title">
+                          <a title="Nephrology Clinic" href="/" onclick="event.preventDefault();">Nephrology Clinic</a>
+                        </h2>
+                        <div class="booking-slider-item__text">
+                          Specialized care for kidney diseases, dialysis, and hypertension management.
+                        </div>
+                        <div class="booking-slider-item__footer">
+                          <div class="booking-slider-item__footer-inner">
+                            <div class="booking-slider-item__amenities">
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-procedures"></i></div>
+                                <div class="booking-slider-item__amenity-text">4 Dialysis Stations</div>
+                              </div>
+                              <div class="booking-slider-item__amenity">
+                                <div class="booking-slider-item__amenity-icon"><i class="fas fa-user-md"></i></div>
+                                <div class="booking-slider-item__amenity-text">2 Nephrologists</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-slider__pagination slider-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="clinic-stats">
+      <div class="stats-grid container">
+        <div class="stat-box">
+          <h3 >+20</h3>
+          <p>Clinic Staff</p> 
+        </div>
+        <div class="stat-box" >
+          <h3>+50</h3>
+          <p>Expert Team</p> 
+        </div>
+        <div class="stat-box">
+          <h3>+1500</h3>
+          <p>Health Check</p> 
+        </div>
+        <div class="stat-box">
+          <h3>+5000</h3>
+          <p>Patient Care</p> 
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container"> 
+          <!-- Hospital Info + Social -->
+          <div class="box">
+              <h3>Elsalam</h3>
+              <ul class="social">
+                  <li>
+                      <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="youtube">
+                          <i class="fab fa-youtube"></i>
+                      </a>
+                  </li>
+              </ul>
+              <p class="text">
+                  Elsalam Hospital offers professional care, modern equipment, and trusted doctors.
+              </p>
+          </div>
+      
+          <!-- Quick Links -->
+          <div class="box">
+              <ul class="links">
+                  <li><a href="#">Clinics</a></li>
+                  <li><a href="#">Doctors</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+      
+          <!-- Contact Info -->
+          <div class="box">
+              <div class="line">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="info">Egypt, Alexandria, Elmandra</div>
+              </div>
+              <div class="line">
+                  <i class="fas fa-clock"></i>
+                  <div class="info">Open 24/7</div>
+              </div>
+              <div class="line">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="info">
+                      <div>+20 123 456 789</div>
+                      <div>+20 987 654 321</div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Footer Gallery -->
+          <div class="box footer-gallery">
+              <img src="assets/hospital-1.jpg" alt="hospital image 1">
+              <img src="assets/hospital-2.jpg" alt="hospital image 2">
+              <img src="assets/hospital-3.jpg" alt="hospital image 3">
+              <img src="assets/hospital-4.jpg" alt="hospital image 4">
+              <img src="assets/hospital-5.jpg" alt="hospital image 5">
+              <img src="assets/hospital-6.jpg" alt="hospital image 6">
+          </div>
+      </div>
+      <p class="copyright">Made With &lt;3 BY YM/MY</p>        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="js/clinics.js"></script>  
+</body>
+</html>

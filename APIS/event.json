@@ -1,0 +1,13 @@
+{
+    "name" : "ISO Certification Achieved",
+    "description" : "We’re proud to announce our hospital is now ISO certified, ensuring high standards of quality and patient safety.",
+    "date":{
+            "year":2025,
+            "month":5,
+            "day" : 15,
+            "hour":6,
+            "min":30,
+            "sec":0
+    } , 
+    "img" : "../assets/event.jpg"
+}

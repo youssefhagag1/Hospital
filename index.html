@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital</title>
+    <title>Elsalam Hospital</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,18 +11,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="https://wa.me/201151719578" class="whatsapp-float" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+    </a>      
+    <div class="top" id="top">
+        <button class="top-btn"><i class="fa-solid fa-angle-up"></i></button>
+    </div>
     <div class="header" id="header">
         <div class="container">
             <a href="#" class="logo">Elsalam Hospital</a>
-
-            <ul class="main-nav">
-                <li><a href="#clinics">Clinics</a></li>
-                <li><a href="#doctors">Doctors</a></li>
-                <li><a href="#appointment">Appointment</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#Contact">Contact</a></li>
+            <ul class="main-nav" id="main-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="clinics.html">Clinics</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 
             </ul>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
         </div>
     </div>
@@ -36,105 +46,16 @@
                 <img src="./assets/hospital-building-concept-illustration.png" alt="i img">
             </div>
         </div>
-        <a href="clinics" class="go-down">
+        <a href="#clinics" class="go-down" id="go-down">
             <i class="fa-solid fa-angles-down"></i>
         </a>
     </div>
-    <div class="clinics">
+    <div class="clinics fade-up" id="clinics">
         <h2 class="main-title">Clinics</h2> 
-        <div class="container">
-            <div class="box">
-                <img src="assets/Internal Medicine Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Internal Medicine</h3>
-                    <p>Expert care helps adult body stay safe and strong.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Dentistry Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Dentistry Clinic</h3>
-                    <p>Clean white teeth bring happy smile, fresh breath daily.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Pediatrics Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Pediatrics Clinic</h3>
-                    <p>Kids grow strong with care, love, health, food, play.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Dermatology Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Dermatology Clinic</h3>
-                    <p>Clear skin glows with soft touch, care, cream, time.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Ophthalmology Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Ophthalmology Clinic</h3>
-                    <p>Eyes see bright world with light, shape, color, love.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Orthopedic Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Orthopedic Clinic</h3>
-                    <p>Move with ease, heal bone pain, joint, leg, back.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Cardiology Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Cardiology Clinic</h3>
-                    <p>Heart beats right with care, test, love, rest, peace.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-            <div class="box">
-                <img src="assets/Neurology Clinic.jpg" alt="i img">
-                <div class="content">
-                    <h3>Neurology Clinic</h3>
-                    <p>Calm mind works clear with sleep, care, time, light.</p>
-                </div>
-                <div class="info">
-                    <a href="#">Read More</a>
-                    <i class="fa-solid fa-right-long"></i>
-                </div>
-            </div>
-        </div>
+        <div class="container"><!--From js--></div>
         
     </div>
-    <div class="information">
+    <div class="information fade-up">
        <div class="container">
         <div class="info">
             <div class="icon"><i class="fas fa-notes-medical"></i></div>
@@ -158,7 +79,7 @@
         </div>
        </div>
     </div>
-    <div class="choose">
+    <div class="choose fade-up">
         <h2>Why Choose it?</h2>
         <p class="para-info">We believe in delivering exceptional care, expert service, and genuine support, all tailored to ensure your comfort, satisfaction, and peace of mind.</p>
        
@@ -209,7 +130,7 @@
     
         </div>
     </div>
-    <div class="medical-equipment">
+    <div class="medical-equipment fade-up">
         <h2 class="main-title">Medical equipments</h2> 
         <div class="container">
             <div class="box">
@@ -246,7 +167,7 @@
         </div>
 
     </div>
-    <div class="doctors">
+    <div class="doctors fade-up">
         <h2 class="main-title">Doctors</h2> 
         <div class="container">
             <div class="box">
@@ -365,7 +286,7 @@
         
  
     </div>
-    <div class="infinty-carusal">
+    <div class="infinty-carusal fade-up">
         <div class="photo-wrapper" id="photoWrapper">
             
             <div class="photo">
@@ -391,7 +312,7 @@
         </div>
         
     </div>
-    <div class="features" >
+    <div class="features fade-up" >
         <h2 class="main-title">Features</h2> 
         <div class="container">
             <div class="box">
@@ -417,7 +338,7 @@
             </div>
         </div>
     </div>
-    <div class="testimonials">
+    <div class="testimonials fade-up">
         <h2 class="main-title">testimonials</h2> 
         <div class="container">
             <div class="box">
@@ -500,7 +421,7 @@
             </div>
         </div>
     </div>
-    <div class="team">
+    <div class="team fade-up">
         <h2 class="main-title">Clinical Staff</h2>
         <div class="container">
             <div class="box">
@@ -590,7 +511,282 @@
         </div>
         
     </div>
-    
+    <div class="services fade-up">
+        <h2 class="main-title">services</h2>
+        <div class="container">
+            <div class="box">
+                <i class="fas fa-calendar-check fa-4x"></i>
+                <h3>Online Booking</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-credit-card fa-4x"></i>
+                <h3>Flexible Payment</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-user-clock fa-4x"></i>
+                <h3>Regular Checkups</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-user-nurse fa-4x"></i>
+                <h3>Elderly Care</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-procedures fa-4x"></i>
+                <h3>Surgical Care</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-vials fa-4x"></i>
+                <h3>Medical Lab</h3>
+                <div class="info">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="disabilities fade-up">
+        <h2 class="main-title">Support Disabilities</h2>
+        <div class="container">
+            <img src="assets/Disabilities.png" alt="i image" class="image">
+            <div class="info">
+                <div class="box">
+                    <img src="assets/Disabilities - 1.png" alt="Fully Equipped Image">
+                    <div class="text">
+                        <h3>Fully Equipped</h3>
+                        <p>Accessible facilities and smooth movement for people with disabilities across all hospital departments.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/Disabilities - 2.png" alt="Priority Service Image">
+                    <div class="text">
+                        <h3>Priority Service</h3>
+                        <p>Special service system for people with disabilities, with fast access and trained staff support.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/Disabilities - 3.png" alt="Emotional Support Image">
+                    <div class="text">
+                        <h3>Emotional Support</h3>
+                        <p>Psychological care and guidance for families and individuals to feel supported and understood.</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="philosophy fade-up">
+        <div class="content">
+            <h2>OUR PHILOSOPHY</h2>
+        <p>This is the subtitle for the heading</p>
+        <p>Patients have an important role to play at each stage of their care and the five safety tips will serve to encourage them to be more involved in their health care.</p>
+        <p>Patients can do a lot of small things to make their health-care experience as safe as possible.</p>
+        <p>Hospitals are places of recovery and healing but there are also safety risks for patients, such as infections, falls and medication errors that can happen despite our best efforts.</p>
+        </div>
+        
+    </div>
+    <div class="events fade-up">
+        <h2 class="main-title">Latest Events</h2>
+        <div class="container">
+            <img src="" alt="i img">
+            <div class="info">
+                <div class="time">
+                    <div class="unit">
+                        <span id="days">08</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="unit">
+                        <span id="hours">08</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="unit">
+                        <span id="minutes">08</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="unit">
+                        <span id="seconds">08</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+                <h2 class="title"></h2>
+                <p class="description"></p>
+            </div>
+            <div class="subscribe">
+                <form action="">
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    <input type="submit" value="Subscribe" id="subscribe_btn">
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="pricing fade-up" id="pricing">
+        <h2 class="main-title">Pricing Plans</h2>
+        <div class="container"> 
+            <!-- Basic Care Plan -->
+            <div class="box">
+                <h3 class="title">Basic Care</h3>
+                <i class="fas fa-stethoscope fa-3x"></i>
+                <div class="price">
+                    <span class="amount">750EGP</span>
+                    <span class="time">Per Month</span>
+                </div>
+                <ul>
+                    <li>Weekly Visit</li>
+                    <li>Monthly Test</li>
+                    <li>Basic Meds</li>
+                    <li>Nurse Check</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        
+            <!-- Regular Monitoring Plan -->
+            <div class="box popular">
+                <div class="lable">Most Popular</div>
+                <h3 class="title">Regular Monitoring</h3>
+                <i class="fas fa-notes-medical fa-3x"></i>
+                <div class="price">
+                    <span class="amount">400EGP</span>
+                    <span class="time">Per Month</span>
+                </div>
+                <ul>
+                    <li>Biweekly Visit</li>
+                    <li>Blood Test</li>
+                    <li>Drug Review</li>
+                    <li>Vitals Check</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        
+            <!-- Advanced Follow-up Plan -->
+            <div class="box">
+                <h3 class="title">Advanced Follow-up</h3>
+                <i class="fas fa-hospital-user fa-3x"></i>
+                <div class="price">
+                    <span class="amount">900EGP</span>
+                    <span class="time">Per Month</span>
+                </div>
+                <ul>
+                    <li>Weekly Doctor</li>
+                    <li>Full Labs</li>
+                    <li>Scan Review</li>
+                    <li>24/7 Nurse</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="donation">
+        <div class="container">
+            <div class="text">
+                <h2>Support Hospital Care Today</h2>
+                <p>Your donation helps us save lives and provide essential medical care every day.</p>
+                <ul>
+                    <li>Helps save lives</li>
+                    <li>Provides essential medicines for patients</li>
+                    <li>Supports free healthcare for those in need</li>
+                    <li>Funds the development of medical equipment</li>
+                    <li>Relieves the burden on low-income families</li>
+                </ul>
+            </div>        
+            <div class="form">
+                <form action="">
+                    <input type="text" id="name" class="input" placeholder="Your Name">
+                    <input type="text" id="phone" class="input" minlength="11" maxlength="11" placeholder="Your Phone">
+                    <input type="text" placeholder="National ID" id="national_id" minlength="14" maxlength="14" class="input">
+                    <input type="number" placeholder="100" class="input" id="value">
+                    <select name="currency" id="currency" class="input">
+                        <option value="EGP">EGP</option>
+                        <option value="KWD">KWD</option>
+                    </select>
+                    <button class="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container"> 
+            <!-- Hospital Info + Social -->
+            <div class="box">
+                <h3>Elsalam</h3>
+                <ul class="social">
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    Elsalam Hospital offers professional care, modern equipment, and trusted doctors.
+                </p>
+            </div>
+        
+            <!-- Quick Links -->
+            <div class="box">
+                <ul class="links">
+                    <li><a href="#">Clinics</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        
+            <!-- Contact Info -->
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info">Egypt, Alexandria, Elmandra</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-clock"></i>
+                    <div class="info">Open 24/7</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="info">
+                        <div>+20 123 456 789</div>
+                        <div>+20 987 654 321</div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Footer Gallery -->
+            <div class="box footer-gallery">
+                <img src="assets/hospital-1.jpg" alt="hospital image 1">
+                <img src="assets/hospital-2.jpg" alt="hospital image 2">
+                <img src="assets/hospital-3.jpg" alt="hospital image 3">
+                <img src="assets/hospital-4.jpg" alt="hospital image 4">
+                <img src="assets/hospital-5.jpg" alt="hospital image 5">
+                <img src="assets/hospital-6.jpg" alt="hospital image 6">
+            </div>
+        </div>
+        <p class="copyright">Made With &lt;3 BY YM/MY</p>        
+    </div>
     <script src="js/home.js"></script>
 </body>
 </html>

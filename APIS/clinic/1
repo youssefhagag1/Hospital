@@ -1,0 +1,25 @@
+{
+  "id": 1,
+  "name": "Internal Medicine Clinic - عيادة الباطنة",
+  "description":"A specialized clinic offering comprehensive care for adults,diagnosing and managing chronic diseases with personalized, evidence-based internal medicine treatments.",
+  "place": "Floor 4",
+  "photo":["../assets/Internal Medicine Clinic.jpg" , "../assets/Internal Medicine Clinic.jpg" , "../assets/Internal Medicine Clinic.jpg"],
+  "doctors": [
+    {
+      "id": 12,
+      "name": "Ahmed Saad",
+      "profile": "assets/doctor-1.jpg",
+      "specialty": "Internal Medicine",
+      "experiance": "+10 Years",
+      "price": "300 EGP"
+    },
+    {
+      "id": 15,
+      "name": "Ashraf Hamed ",
+      "profile": "assets/doctor-2.jpg",
+      "specialty": "Internal Medicine",
+      "experiance": "+5 Years",
+      "price": "150 EGP"
+    }
+  ]
+}
