@@ -27,6 +27,7 @@ function showNav(){
 }
 /*End Scroll to top */
 
+
 /*Start video */
 let video = document.getElementById("video");
 let about = document.querySelector(".about-second");

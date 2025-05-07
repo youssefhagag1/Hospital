@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="chat" id="chat">
+        <i class="fa-regular fa-message"></i>
+    </div>
     <a href="https://wa.me/201151719578" class="whatsapp-float" target="_blank">
         <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
     </a>      
@@ -706,7 +709,7 @@
             </div>        
             <div class="form">
                 <form action="">
-                    <input type="text" id="name" class="input" placeholder="Your Name">
+                    <input type="text" id="name" class="input" placeholder="Your Name" >
                     <input type="text" id="phone" class="input" minlength="11" maxlength="11" placeholder="Your Phone">
                     <input type="text" placeholder="National ID" id="national_id" minlength="14" maxlength="14" class="input">
                     <input type="number" placeholder="100" class="input" id="value">
@@ -787,6 +790,7 @@
         </div>
         <p class="copyright">Made With &lt;3 BY YM/MY</p>        
     </div>
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>

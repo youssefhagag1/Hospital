@@ -29,6 +29,207 @@ function showNav(){
 }
 /*End Scroll to top */
 
+
+/*Start Chat */
+let currentUUID = null;
+let currentId = null; 
+let chat  = document.getElementById("chat");
+let chat_container = document.createElement("div");
+chat_container.setAttribute("class" , "chatContainer");
+chat_container.setAttribute("id" , "chat_container")
+let form_name = document.createElement("form");
+form_name.setAttribute("id" , "requestForm");
+form_name.classList.add("requestForm");
+
+
+
+let requested_name = document.createElement("input");
+requested_name.name = "name";
+requested_name.required = true;
+requested_name.placeholder = "Your Name";
+requested_name.classList.add("PatientName");
+
+let send_name = document.createElement("button");
+send_name.textContent = "Send";
+send_name.classList.add("sendName");
+
+
+form_name.appendChild(requested_name);
+form_name.appendChild(send_name);
+
+let close_btn = document.createElement("button");
+close_btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+close_btn.classList.add("close");
+chat_container.appendChild(close_btn);
+
+chat_container.appendChild(form_name);
+
+document.body.appendChild(chat_container);
+let uuid = localStorage.getItem("uuid");
+let chatId = localStorage.getItem("chatId");
+let done = false;
+chat.addEventListener("click", _ => {
+    chat_container.setAttribute("class" , "active chatContainer");
+    if(uuid && chatId) {
+        
+        startChat(uuid , chatId);
+        if(!done) {
+            changeUi(uuid);
+            done = true;
+        }
+    }
+    
+});
+close_btn.addEventListener("click", _ => {
+    chat_container.classList.remove("active");
+});
+
+send_name.addEventListener("click" , e => {
+    e.preventDefault();
+    if(requested_name.value !== ""){
+        let request = new FormData(form_name);
+    fetch("http://127.0.0.1:8000/api/request/chat" , {
+        method : "Post",
+        body : request
+    })
+    .then(response => {
+        if(!response.ok){
+            throw new Error("cant fetch");
+        }
+        return response.json();
+    })
+    .then(data => {
+            console.log(data);
+            currentUUID =data.chat.uuid;
+            currentId = data.chat.id; 
+            localStorage.setItem("uuid" , currentUUID);
+            localStorage.setItem("chatId" , currentId);
+            changeUi();
+            startChat(currentUUID , currentId)
+        
+    })
+    .catch(error => console.log(error));
+    }
+})
+async function changeUi(uuid){
+    form_name.remove();
+   
+    let receptionist = document.createElement("div");
+    receptionist.classList.add("receptionist");
+
+    let receptionist_title = document.createElement("h2");
+    receptionist_title.textContent = "receptionist";
+
+    let receptionist_img = document.createElement("img"); 
+    receptionist_img.src = "../assets/hospital-reception.png";
+    receptionist_img.alt = "i image";
+
+    receptionist.appendChild(receptionist_img);
+    receptionist.appendChild(receptionist_title);
+
+    chat_container.appendChild(receptionist);
+
+    let messageForm = document.createElement("form");
+    messageForm.classList.add("messageForm");
+
+    let message_input = document.createElement("input");
+    message_input.focus();
+    message_input.name = "message";
+    message_input.required = "true";
+    message_input.classList.add("messageInput");
+    message_input.setAttribute("id" , "messageInput");
+    message_input.placeholder = "Message";
+
+    let message_btn = document.createElement("button");
+    message_btn.classList.add("message_btn");
+    message_btn.setAttribute("id" , "sendMessage");
+    message_btn.innerHTML = '<i class="fa-regular fa-paper-plane"></i>';
+
+    messageForm.appendChild(message_input);
+    messageForm.appendChild(message_btn);
+    chat_container.appendChild(messageForm);
+
+    if(uuid){
+    try {
+        let response = await fetch(`http://127.0.0.1:8000/api/chat/${uuid}`);
+        let data = await response.json();
+        let messages = data.chat.messages;
+        for(let i = 0 ; i< messages.length ; i++) {
+            showInUi(messages[i].message , messages[i].sendedBy);
+        }
+    } catch(error) {
+        console.log(error);
+    }
+    }
+    
+   message_btn.addEventListener("click" , e=> {
+    e.preventDefault();
+    let message_value = message_input.value;
+        if(message_value != ""){
+            const messageData = new FormData();
+            messageData.append("uuid" , uuid || currentUUID);
+            messageData.append("message" , message_value);
+            fetch("http://127.0.0.1:8000/api/send" , {
+                method: "post",
+                body : messageData
+            })
+            .then(response => {
+                if(!response.ok){
+                    throw new Error("cant fetch");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                message_input.value = "";
+            })
+            .catch(error => console.log(error));
+        }
+    })
+}
+
+function startChat(uuid ,id){
+    let pusher = new Pusher("caa359463e78926e217b" , {
+        cluster : "eu",
+        encrypted : true
+    })
+    pusher.connection.bind("connected" , _=> {
+        console.log("pusher connected successfully");
+    })
+    pusher.connection.bind("error" , error => {
+        console.log("pusher not connected" , error)
+    })
+    let channel = pusher.subscribe(`message-sended${id}`);
+
+    channel.bind("message.sended" , data => {
+        if(data && data.message) {
+            console.log(data)
+            showInUi(data.message.message , data.message.sendedBy );
+        }else {
+            console.log("message data missing");
+        }
+    })
+}
+let messages = document.createElement("div");
+function showInUi(message , sendedBy ){
+    messages.classList.add("messages");
+    let oneMessage = document.createElement("div");
+    oneMessage.classList.add("message");
+    oneMessage.textContent = message;
+    if(sendedBy == "sender"){
+        oneMessage.classList.add("sender");
+        
+    }else {
+        oneMessage.classList.add("user");
+
+    }
+    messages.appendChild(oneMessage);
+    chat_container.appendChild(messages);
+    messages.scrollTop = messages.scrollHeight;
+}
+/*End Chat */
+
+
 /*Start Observer Fade */
 const elements = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver(entries => {

@@ -8,6 +8,7 @@
     --main-padding-top : 100px;
     --main-padding-bottom : 100px;
 }
+  
 *{
     margin: 0;
     padding: 0;
@@ -149,12 +150,223 @@ text-transform: uppercase;
 }
 /*End Scroll to top*/
 
+/*Start Scroll Bar*/
+::-webkit-scrollbar {
+    width: 20px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color); 
+   height: 100px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--section-bacground); 
+  }
+/*End Scroll Bar*/
+
+/*Start Chat*/
+.chat {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: var(--main-color);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .chatContainer{
+   transform: scale(0);
+   display: none;
+  }
+  .chatContainer.active {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    width: 500px;
+    height: calc(100vh - 72px);
+    margin-left: 10px;
+    border-radius: 2px;
+    background-color:#eee;
+    transform: scale(1);
+    transform-origin: center;
+    transition:  var(--main-transition);
+}
+.chatContainer .requestForm{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+    .requestForm input{
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        height: 45px;
+        border-radius: 5px 0 0 5px;
+        caret-color: var(--main-color);
+    }
+    .requestForm input:focus {
+        outline: none;
+    }
+    .requestForm button {
+        width: 70px;
+        height: 45px;
+        padding: 10px;
+        border: none;
+        background: var(--main-color);
+        font-size: 18px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+    .messageForm {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .messageInput {
+        width: calc(100% - 80px);
+        border: none;
+        font-size: 18px;
+        height: 50px;
+        padding: 20px;
+    }
+    .messageInput:focus {
+        outline: none;
+    }
+    .message_btn {
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: var(--main-color);
+        color: white;
+        margin-left: 20px;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .receptionist {
+        display: flex;
+        gap: 20px;
+        padding-left: 10px;
+        padding-bottom: 9px;
+        margin-top: 15px;
+        align-items: center;
+        border-bottom: 1px solid;
+    }
+    .receptionist img {
+        width: 50px;
+    }
+    .receptionist h2 {
+        text-transform: capitalize;
+        font-size: 24px;
+    }
+    .messages{
+        padding: 30px 30px 0;
+        height: calc(100% - 180px);
+        overflow: auto;
+    }
+    .message{
+        width: fit-content;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    word-break: break-all;
+    max-width: 370px;
+
+    }
+    .message.user {
+        position: relative;
+        border-radius:5px 0px 5px 5px;
+        background-color: var(--main-color);
+        color: white;
+        margin-left: auto;
+        right: 40px;
+    }
+    .message.sender {
+        word-break: break-all;
+        position: relative;
+        border-radius: 0px 5px 5px;
+        background-color: #159957;
+        color: white;
+        left: 40px;
+    }
+    .message.user::before{
+        content: "R";
+        position: absolute;
+        right: -55px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #000;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        z-index: 1;
+    }
+    .message.sender::before{
+        content: "U";
+        position: absolute;
+        left: -55px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #000;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        z-index: 1;
+    }
+    .close {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    border: none;
+    background-color: #000;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+
+    }
+
+
+@media(max-width:767px){
+    .chatContainer.active{
+        width: 100%;
+        margin-left: 0;
+        bottom: 0;
+    }
+}
+/*End Chat*/
+
 /*Start whatsapp*/
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     left: 20px;
     z-index: 999;
+    cursor: pointer;
   }
   
 /*End whatsapp*/

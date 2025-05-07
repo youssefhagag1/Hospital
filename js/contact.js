@@ -27,3 +27,6 @@ function showNav(){
     main_nav.classList.toggle("active")
     burger.classList.toggle("active")
 }
+
+
+

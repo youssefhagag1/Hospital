@@ -8,6 +8,21 @@
     --main-padding-top : 100px;
     --main-padding-bottom : 100px;
 }
+/*Start Scroll Bar*/
+::-webkit-scrollbar {
+    width: 20px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color); 
+   height: 100px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--section-bacground); 
+  }
+/*End Scroll Bar*/
+
 *{
     margin: 0;
     padding: 0;
@@ -81,6 +96,7 @@ a{
     left: 20px;
     z-index: 999;
   }
+  
   
 /*End whatsapp*/
 
